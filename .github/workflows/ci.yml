@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run shared Java CI
-        uses: mahekshahbad/composite-actions/java-quality-check@v2
+        uses: mahekshahbad/composite-actions/java-quality-check@v1
         with:
           java-version: "17"
