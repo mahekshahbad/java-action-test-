@@ -5,13 +5,12 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  quality:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Run Java composite action
-        uses: mahekshahbad/composite-actions/java-quality-check@v3
+      - name: Run shared Java CI
+        uses: mahekshahbad/composite-actions/java-quality-check@v2
         with:
-          java-version: "22"
+          java-version: "17"
