@@ -1,16 +1,17 @@
-name: CI 
+name: CI
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  quality:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Run shared Java CI
-        uses: mahekshahbad/composite-actions/java-quality-check@v2
+      - name: Run Java composite action
+        uses: mahekshahbad/composite-actions/java-quality-check@v3
         with:
-          java-version: "17"
+          java-version: "22"
